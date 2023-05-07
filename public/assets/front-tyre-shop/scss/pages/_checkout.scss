@@ -1,0 +1,170 @@
+.center-page .box .form .secondary-headline {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    color: $black-color;
+}
+
+.address-icon {
+    position: relative;
+    .marker-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .fas {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 1.6rem;
+    }
+}
+
+.check-icon {
+    .fa-check {
+        width: 27px;
+        height: 27px;
+        background-color: $primary-color;
+        color: $white-color;
+        margin-left: 15px;
+        display: inline-flex;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+    }
+}
+
+.checkout {
+    @include custom-checkbox();
+    @include custom-radio();
+    @include box-expand();
+    .radio-container input:checked~.checkmark {
+        border: 2px solid $primary-color;
+    }
+    .radio-container .checkmark:after {
+        background-color: $primary-color;
+        top: 4px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        // border-radius: 50%;
+        @include small-767 {
+            top: 2px;
+            left: 2px;
+            width: 5px;
+            height: 5px;
+        }
+    }
+    .sm-btn .btn {
+        text-transform: capitalize;
+        padding: 0 !important;
+        @include flex-box();
+        max-width: 16.4rem;
+        height: 5rem;
+        width: 100%;
+        line-height: normal !important;
+        @include m-425 {
+            margin-top: 3rem;
+        }
+    }
+    .primary-title {
+        font-size: 26px;
+        color: $black-color;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    .checkmark {
+        border-color: #999;
+    }
+    .checkbox-container {
+        padding-left: 0;
+        .checkmark {
+            right: -38px;
+            left: unset;
+            top: 13px;
+        }
+    }
+    .gender-radio {
+        .radio-container {
+            margin-left: 0;
+        }
+    }
+    .primary-headline {
+        .primary-head {
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+    }
+    .select-field {
+        height: 5rem !important;
+        appearance: none;
+        background-image: url(../../images/select-icon.png);
+        background-position: 95.5% center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-size: 1.4rem;
+        @include m-575 {
+            background-position: 96.5% center;
+        }
+        @include m-425 {
+            background-position: 94% center;
+        }
+    }
+    .ful-col {
+        .select-field {
+            background-position: 97.8% center;
+            @include m-575 {
+                background-position: 96.5% center;
+            }
+            @include m-425 {
+                background-position: 94% center;
+            }
+        }
+    }
+    .fitting-location {
+        .motor-city {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            margin-bottom: 1.6rem;
+            color: $black-color;
+        }
+        .date-time {
+            font-size: 2rem;
+            color: $text-color;
+            margin-bottom: 0;
+            line-height: 2rem;
+        }
+    }
+}
+
+// Responsiveness 
+@media (max-width:$xxxsm-device) {
+    .checkout .primary-title {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width:$xxsm-device) {
+    .primary-headline .primary-head {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .checkout .primary-title {
+        font-size: 20px;
+    }
+}
+
+// RTL
+.RTL {
+    .address-icon .fas {
+        right: unset;
+        left: 20px;
+    }
+    .check-icon .fa-check {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,18 @@
+.services {
+    background-color: $white-color;
+    .custom-row .cols .services-card {
+        filter: drop-shadow(0 .3rem .6rem rgba(0, 0, 0, 0.16));
+        &:hover {
+            filter: drop-shadow(0 .3rem .6rem rgba(0, 0, 0, 0.36)); 
+        }
+    }
+    @include pagination-space-sm();
+}
+
+.rtl {
+    .services {
+        .custom-row  + .text-right{
+            text-align: left !important;
+        }
+    }    
+}

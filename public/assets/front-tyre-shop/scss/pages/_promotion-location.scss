@@ -1,0 +1,1122 @@
+section.promotion-images-main-sec {
+    margin: 100px 0px 70px 0px;
+}
+
+.main-img-promotion {
+    margin-bottom: 30px;
+    max-width: 360px;
+    width: 100%;
+    overflow: hidden;
+    min-height: 223px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    transition: .4s all;
+    &:hover {
+        box-shadow: 0px 5px 36px rgba(0, 0, 0, 0.16);
+    }
+    @include large-1199 {
+        min-height: initial;
+    }
+    @include m-575 {
+        min-height: initial;
+        width: 330px;
+        margin: 0 auto;
+        margin-bottom: 30px !important;
+    }
+    @include m-320 {
+        width: 280px;
+        max-width: 100%;
+    }
+}
+
+// location page cssss
+.location-main-sec {
+    margin: 100px 0px;
+    .col-md-12.mt-5 {
+        margin-top: 0 !important;
+    }
+}
+
+.main-location-us {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    min-height: 338px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    @include m-575 {
+        margin-bottom: 30px;
+    }
+}
+
+// .main-location-us.center-box {
+//     @include small-767 {
+//         margin-top: 3rem;
+//     }
+// }
+
+.inner-location-us {
+    padding: 30px;
+    width: 100%;
+    .loc-h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .ul-loctaion-page {
+        margin-top: 16px;
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            color: #222;
+            text-transform: capitalize;
+            margin-bottom: 3px;
+            line-height: 28px;
+            text-overflow: ellipsis;
+            // white-space: nowrap;
+            overflow: hidden;
+            .loctaion-num {
+                font-weight: 600;
+                color: #222;
+                text-decoration: none;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .location-btn {
+        display: flex;
+        justify-content: center;
+        @include large-1199 {
+            justify-content: start;
+        }
+        .btn {
+            padding: 17px 25px 16px 25px !important;
+            height: 50px;
+            font-size: 14px !important;
+            @include m-575 {
+                height: auto;
+            }
+        }
+    }
+    .select-title {
+        font-size: 18px;
+        color: #212529;
+        margin: 15px 0;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
+.btnz-row,
+.default-row {
+    .select-field {
+        height: 50px !important;
+        border-radius: 5rem;
+        padding: 14px 20px 15px 20px !important;
+        font-size: 1.4rem;
+        appearance: none;
+        background-image: url(../../images/down-arrow.png);
+        background-position: 87.5% center;
+        background-repeat: no-repeat;
+        background-size: 1.1rem;
+        cursor: pointer;
+        @include large-1199 {
+            margin-bottom: 2rem;
+        }
+        &:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
+    }
+}
+
+.btnz-row {
+    .middle-col {
+        @include large-min-1199 {
+            flex: 0 0 28%;
+            max-width: 28%;
+        }
+        &.pl-0 {
+            @include small-767 {
+                padding-left: 15px !important;
+            }
+            
+        }
+    }
+    .last-col {
+        @include large-min-1199 {
+            flex: 0 0 38.666667%;
+            max-width: 38.666667%;
+        }
+    }
+}
+
+// end location page csss
+// book appointment pages
+.icons-append {
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    background: #DDDDDD;
+    width: 47px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-con-appointment {
+    padding-left: 60px !important;
+}
+
+.appoint-ment-main-fieldss {
+    .form-control:focus {
+        box-shadow: none !important;
+    }
+    .form-group .form-control {
+        border-color: #ddd;
+        padding: 1.5rem 2rem;
+        color: #999;
+        height: 50px;
+        line-height: 1.4rem;
+        font-size: 1.4rem;
+        font-weight: normal;
+        border-radius: .5rem;
+        &::placeholder {
+            color: #888;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+    }
+    .m-b-25 {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.appoint-tittle {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $black-color;
+}
+
+.appoint-check-box {
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    @include large-1199 {
+        display: initial;
+        column-count: 3;
+    }
+    @include m-575 {
+        column-count: 1;
+    }
+}
+
+.inner-appoint-check {
+    width: 204px;
+    box-shadow: 0px;
+    border: 1px solid #ddd;
+    height: 50px;
+    line-height: 47px;
+    border-radius: 5px;
+    margin-right: 30px;
+    .form-check {
+        padding-top: 1px;
+    }
+    @include large-1199 {
+        width: 284px;
+        margin-bottom: 25px;
+    }
+    @include medium-991 {
+        width: 204px;
+        margin-bottom: 25px;
+    }
+    &:last-child {
+        margin-right: 0px;
+        @include m-575 {
+            margin-bottom: 0px;
+        }
+    }
+    .form-check-label {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+    }
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        text-transform: capitalize;
+    }
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border: 1.5px solid #707070;
+        left: auto;
+    }
+    /* On mouse-over, add a grey background color */
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked~.checkmark {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    .container input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+        left: 4px;
+        top: 0px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.text-area-appoint {
+    textarea {
+        overflow: auto;
+        resize: none;
+        margin-top: 30px;
+        min-height: 145px;
+    }
+    .form-control:focus {
+        box-shadow: none !important;
+    }
+}
+
+.appoint-btn-m {
+    margin-top: 28px;
+    .btn {
+        width: 260px;
+        font-size: 16px;
+        font-weight: 600 !important;
+        padding: 1.7rem 0 1.6rem 0 !important;
+    }
+}
+
+.rtl {
+    .form-con-appointment {
+        padding-right: 60px !important;
+        padding-left: 0px !important;
+    }
+    .icons-append {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .inner-appoint-check .checkmark {
+        left: 15px;
+        right: auto;
+    }
+    .appoint-check-box {
+        padding-left: 0px;
+        padding-right: 15px;
+    }
+    .inner-appoint-check {
+        margin-left: 30px;
+        margin-right: 0px;
+    }
+    .icons-append img {
+        transform: scaleX(-1);
+    }
+}
+
+// end book appointment
+// contact us pageeee
+.conatct-us-page-sec {
+    margin-top: 100px;
+}
+
+.main-address-contact {
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.10);
+    border-width: 1px;
+    margin-bottom: 50px;
+    padding: 15px 0px;
+    height: 173px;
+    background: #F9F9F9;
+    @include m-575 {
+        height: unset;
+        flex-direction: column;
+        background: none;
+        box-shadow: none;
+    }
+    .help-one-mt {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid #BDBDBD;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        flex-direction: column;
+        @include m-575 {
+            box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.10);
+            margin-bottom: 25px;
+            background: #F9F9F9;
+            padding: 20px 0px;
+            border-right: none;
+        }
+        &:last-child {
+            border-right: none !important;
+        }
+        .inner-help-one {
+            padding-top: 10px;
+            @include m-575 {
+                padding-top: 0px;
+            }
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .help-one-mt h4 {
+            width: 100%;
+            text-transform: capitalize !important;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #222222;
+        }
+        p {
+            width: 295px;
+            margin-bottom: 0px;
+            line-height: 30px;
+            font-size: 18px;
+            color: #222;
+            font-weight: 400;
+            padding-top: 4px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+            // white-space: nowrap;
+            @include medium-991 {
+                width: 180px;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.contact-us-page-tittle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $black-color;
+    margin-bottom: 40px;
+    br {
+        display: block;
+        margin-bottom: 10px;
+        content: "";
+    }
+}
+
+.text-area-cotact-us-page {
+    textarea {
+        overflow: auto;
+        resize: none;
+        min-height: 250px;
+    }
+}
+
+.google-map {
+    position: relative;
+    margin-top: 50px;
+    box-shadow: 0px -3px 16px rgba(0, 0, 0, 0.21);
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 510px;
+    }
+}
+
+.rtl {
+    .main-address-contact .help-one-mt {
+        border-right: none;
+        border-left: 1px solid #BDBDBD;
+        @include m-575 {
+            border-left: none;
+        }
+        &:last-child {
+            border-left: none;
+        }
+    }
+}
+
+// end contact us page
+// about us page csss
+.about-us-img-main {
+    min-width: 264px;
+    height: 365px;
+    overflow: hidden;
+    @include s-280 {
+        min-width: 100%;
+    }
+}
+
+.about-us-content-main {
+    margin-top: 20px;
+    @include large-1199 {
+        margin-left: 0px;
+    }
+    .about-us-he {
+        font-size: 36px;
+        font-weight: 600;
+        color: #222;
+        text-transform: capitalize;
+    }
+    .p-ltalic {
+        font-size: 16px;
+        font-weight: 400;
+        color: #999;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .p-about-uss {
+        font-size: 16px;
+        line-height: 28px;
+        color: #999;
+        font-weight: 300;
+    }
+    .ab-name-h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+    .gold-italic {
+        font-size: 16px;
+        font-weight: 500;
+        color: $primary-color;
+    }
+}
+
+.customer-support-about-main {
+    width: 263px;
+    background: #F6F6F6;
+    padding: 30px 15px;
+    height: 365px;
+    @include large-1199 {
+        margin-left: 13px;
+        margin-top: 30px;
+        width: 265px;
+    }
+    @include m-575 {
+        width: initial;
+        margin-left: 0px;
+    }
+    .icon-phone-support {
+        margin-top: 18px;
+    }
+    .support-tittle {
+        font-size: 18px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 15px;
+        line-height: 27px;
+    }
+    .support-p {
+        font-size: 12px;
+        line-height: 23px;
+        color: #999;
+        font-weight: 400;
+        height: 45.7px;
+        overflow: hidden;
+    }
+    .support-number {
+        font-size: 19px;
+        color: $primary-color;
+        font-weight: 700;
+        padding-left: 15px;
+        position: relative;
+        top: 3px;
+    }
+    .social-icon-support {
+        background: white;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        height: 130px;
+        padding: 15px 15px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .social-p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #999;
+        margin-bottom: 0px;
+        text-decoration: none;
+        display: block;
+        max-width: 23.3rem;
+        white-space: normal;
+        @include m-425 {
+            max-width: 100%;
+        }
+    }
+    .icons-p-t-i {
+        text-align: center;
+        margin-top: 18px;
+        .fab,
+        .far {
+            font-weight: 400;
+            width: 35px;
+            height: 35px;
+            background: #F6F6F6;
+            border-radius: 50%;
+            color: #797979;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 10px;
+            justify-content: center;
+            &:hover {
+                color: $white-color;
+                background-color: $primary-color;
+            }
+        }
+        a {
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+// end about us page css
+// start my account page
+.title-subtitle-row {
+    padding-top: 15px;
+    .my-account-tittle {
+        margin-bottom: 22px !important;
+    }
+}
+
+// .address {
+//     margin-top: 2.5rem;
+// }
+.my-account-tittle {
+    font-size: 26px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: $black-color;
+    line-height: 26px;
+}
+
+.main-my-account-pagee {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    @include m-575 {
+        margin-bottom: 30px;
+    }
+    .inner-my-account {
+        height: 80px;
+        overflow: hidden;
+        margin: 20px 25px;
+        @include small-767 {
+            height: auto !important;
+        }
+        .p-innr-acc {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: .6rem;
+        }
+    }
+    .info-tittle {
+        height: 48px;
+        background: $primary-color;
+        text-align: center;
+        font-size: 20px;
+        text-transform: capitalize;
+        line-height: 50px;
+        color: white;
+        font-weight: 600;
+    }
+    .my-ccount-edit {
+        height: 40px;
+        background: $black-color;
+        display: flex;
+        justify-content: space-around;
+        line-height: 40px;
+        .edit-btn-my {
+            border: none;
+            width: 100%;
+            font-size: 14px;
+            background: transparent;
+            font-weight: 400;
+            outline: 0 !important;
+            text-transform: capitalize;
+            color: white !important;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            &:hover {
+                background: $primary-color;
+            }
+        }
+        .edit-btn-my-2 {
+            border: none;
+            outline: 0 !important;
+            width: 100%;
+            background: transparent;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 400;
+            position: relative;
+            color: white !important;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            &:hover {
+                background: $primary-color;
+            }
+            &:after {
+                content: '';
+                background: #707070;
+                height: 25px;
+                width: 1px;
+                top: 7px;
+                position: absolute;
+                left: 0px;
+            }
+        }
+    }
+}
+
+.sub-tittle-info-manage {
+    .manage-link {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color: $black-color;
+        padding-top: 10px;
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: .3s all;
+        @include small-767 {
+            padding-top: 0;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.custom-sec-inner-account {
+    margin: 100px 0px;
+}
+
+// end my account page cssss
+// adress book edit scss
+.custom-sec-inner-account.address-book-edit {
+    .border-tb {
+        border-top: 1px solid #EEE;
+        border-bottom: 1px solid #EEE;
+    }
+    .border-b {
+        border-bottom: 1px solid #EEE;
+    }
+    .border-r {
+        border-right: 1px solid #ddd;
+    }
+    .inner-my-account {
+        height: 20.8rem;
+        @include flex-box();
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .additional-entries-row {
+        padding-top: 3rem;
+        margin-top: 4rem;
+        .address-btn {
+            .btn {
+                padding: 1.7rem 2.97rem 1.5rem 2.97rem !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+    .address-table {
+        max-width: 88.5rem;
+        width: 100%;
+        @include large-min-1199 {
+            overflow-x: hidden;
+        }
+        .title {
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-bottom: 0;
+            color: $black-color;
+            padding: 4.5rem 0 2.5rem 0;
+            border: 0;
+        }
+        .f-name {
+            width: 12.2rem;
+        }
+        .l-name {
+            width: 10.8rem;
+        }
+        .address {
+            width: 11.7rem;
+        }
+        .city {
+            width: 10rem;
+        }
+        .country {
+            width: 11.7rem;
+        }
+        .state {
+            width: 10rem;
+        }
+        .zip {
+            width: 10rem;
+        }
+        .phone {
+            width: 13rem;
+        }
+        .subtitle-row {
+            position: relative;
+        }
+    }
+    .sub-title {
+        color: #666;
+        font-weight: normal;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+        padding: 3.4rem 0;
+        border: 0;
+        display: flex;
+        align-items: center;
+    }
+    .icons-block {
+        padding-left: .2rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .fas {
+            padding: 0 .8rem;
+            color: $black-color;
+            font-size: 1.2rem;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        .fas.fa-edit {
+            padding: 0 .5rem;
+            border-right: 1px solid #ddd;
+        }
+        .fas.fa-trash-alt.border-r {
+            border: 0;
+        }
+    }
+}
+
+// address book csss
+.appoint-ment-main-fieldss {
+    .label-appoint-field {
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .form-group {
+        .select-field {
+            height: 50px !important;
+            appearance: none;
+            background-image: url(../../images/dropdown-icon.png);
+            background-position: 92.5% center;
+            background-repeat: no-repeat;
+            padding-left: 61px !important;
+        }
+    }
+}
+
+.location-btn-book-address {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+        width: 173px !important;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 1.7rem 0 1.6rem 0 !important;
+    }
+}
+
+.inner-account-info-check {
+    display: inline-block;
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 0px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #333;
+        font-weight: 600;
+        font-family: 'Montserrat';
+        text-transform: capitalize;
+        padding-top: 1px;
+    }
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 22px;
+        width: 22px;
+        background-color: white;
+        border: 1px solid #E7E7E7;
+    }
+    /* On mouse-over, add a grey background color */
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked~.checkmark {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        // display: none;
+    }
+    /* Show the checkmark when checked */
+    .container input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+        left: 6px;
+        top: 0px;
+        width: 8px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.content-info-p-ac {
+    margin-top: 25px;
+    .info-p-ac-p {
+        font-size: 20px;
+        font-weight: 500;
+        color: $black-color;
+        margin-bottom: 21px;
+    }
+}
+
+// images logo
+.qust-filed {
+    margin-bottom: 15px;
+    .upload-file {
+        position: relative;
+        min-height: 122px !important;
+        width: 164px;
+        margin-left: 15px;
+        margin-right: 20px;
+        // border-radius: 5px !important;
+        border: 1px solid #eee !important;
+        overflow: hidden;
+        .fa-plus-circle {
+            &:before {
+                font-size: 28px;
+            }
+        }
+    }
+    .input-file {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    .input-file+.js-labelFile {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    .upload-file label {
+        margin-top: 30px !important;
+    }
+    .upload-file label span {
+        font-size: 14px;
+        font-weight: 600;
+        color: $black-color;
+    }
+    .upload-file .icon {
+        left: 0px !important;
+        top: 0px;
+        padding-top: 30px;
+        position: absolute;
+        right: 0px !important;
+        height: 120px;
+        text-align: center !important;
+        font-size: 30px;
+        color: #CCCCCC !important;
+    }
+    .upload-file:hover {
+        background: $primary-color;
+        cursor: pointer !important;
+    }
+    .upload-file:hover span {
+        color: white !important;
+    }
+    .upload-file:hover .icon {
+        color: white !important;
+        cursor: pointer;
+    }
+    .upload-file-2 {
+        position: relative;
+        min-height: 122px !important;
+        // width: 164px;
+        background: #F8F8F8;
+        border: 1px solid #F8F8F8 !important;
+        overflow: hidden;
+        padding: 0 !important;
+        @include m-425 {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        .btn-tertiary {
+            margin-bottom: 0;
+        }
+    }
+    .upload-file-2 i.fas.fa-image {
+        font-size: 30px;
+        color: #999999;
+    }
+}
+
+.border-botm-custom {
+    border-bottom: 1px solid #DDDDDD;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 20px 15px;
+}
+
+.rtl {
+    .site-map-main {
+        padding: 46px 30px 35px 0;
+        .site-map-ul {
+            margin-right: 20px;
+            margin-left: 0;
+        }
+    }
+    .inner-account-info-check .checkmark {
+        right: 0px;
+        left: auto;
+    }
+    .inner-account-info-check .container {
+        padding-left: 0px;
+        padding-right: 32px;
+    }
+    .qust-filed .upload-file {
+        margin-right: 15px;
+        margin-left: 30px;
+    }
+}
+
+// end csss images logo
+// end address book csss
+// site map page csss
+section.site-map-secs {
+    margin: 100px 0px 70px;
+}
+
+.site-map-main {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    padding: 46px 0px 35px 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    .site-map-tittle {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: $black-color;
+    }
+    .site-map-ul {
+        margin-left: 20px;
+        .li-site-map {
+            font-size: 18px;
+            color: #222;
+            list-style: disc;
+            font-weight: 400;
+            margin-bottom: 5px;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// end site map page csss

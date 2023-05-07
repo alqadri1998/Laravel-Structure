@@ -1,0 +1,210 @@
+// Model css
+.modal-dialog {
+    max-width: 131.1rem !important;
+    // height: 40.8rem;
+    border-radius: 1rem;
+    @include large-1440 {
+        max-width: 100rem !important;
+        height: auto;
+    }
+    .modal-content {
+        height: 100%;
+        width: 100%;
+        padding: 7rem 5rem;
+        .primary-title {
+            color: $black-color;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 2.4rem;
+            padding-top: .1rem;
+            text-decoration: none;
+        }
+        .modal-header {
+            border-bottom: 0;
+            padding: 0;
+            margin-bottom: 3.5rem;
+            .checkboxes-row {
+                .checkboxes {
+                    .checkmark {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border: 1px solid #707070;
+                        background-color: #fff;
+                        &:after {
+                            top: .25rem;
+                        }
+                    }
+                    input:checked~.checkmark {
+                        background-color: $primary-color !important;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+            .close {
+                background: $primary-color;
+                width: 3.6rem;
+                height: 3.6rem;
+                opacity: 1;
+                color: $white-color;
+                border-radius: 5rem;
+                font-size: 3.5rem;
+                padding: 0;
+                position: absolute;
+                right: 2rem;
+                z-index: 111;
+                outline: none;
+                top: 2rem;
+                transition: .4s all;
+                &:hover {
+                    color: $primary-color;
+                    background-color: $white-color;
+                    box-shadow: 0 3px 6px rgba($black-color, .16);
+                }
+            }
+            .first-checkbox {
+                margin-right: 5rem;
+                @include m-425 {
+                    margin-right: 4rem;
+                }
+            }
+            .second-checkbox {
+                margin-left: 5rem;
+                @include m-425 {
+                    margin-left: 0;
+                }
+                @include m-375 {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        .modal-body {
+            padding: 0;
+            .form-sec {
+                .form-row {
+                    .form-group.select-field {
+                        margin-bottom: 0;
+                        label {
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            color: $black-color;
+                            margin-bottom: 1.5rem;
+                        }
+                        .form-control {
+                            appearance: none;
+                            background-image: url(../../images/dropdown-icon.png);
+                            background-position: 91.5% center;
+                            background-repeat: no-repeat;
+                            height: 5rem;
+                            padding: 0 2rem;
+                            font-size: 1.4rem;
+                            color: #888;
+                            line-height: 1.4rem;
+                            border-color: #DDD;
+                            cursor: pointer;
+                            width: 31.1rem;
+                            max-width: 100%;
+                            margin-right: 3rem;
+                            @include large-1440 {
+                                width: 21.3rem;
+                            }
+                            @include medium-991 {
+                                width: 19.3rem;
+                            }
+                            @include small-767 {
+                                width: 25.3rem;
+                            }
+                            @include m-575 {
+                                width: 32.3rem;
+                            }
+                            @include m-425 {
+                                width: 41.3rem;
+                                margin-bottom: 3rem;
+                            }
+                            @include m-320 {
+                                width: 35.3rem;
+                            }
+                            &:focus {
+                                border-color: #DDD;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                    .rim-field {
+                        @include small-767 {
+                            margin-top: 3rem
+                        }
+                        @include m-425 {
+                            margin-top: 0;
+                        }
+                    }
+                    .submit-btn {
+                        @include medium-991 {
+                            margin-top: 3rem;
+                        }
+                        @include m-575 {
+                            margin-top: 0;
+                        }
+                        .btn {
+                            font-size: 1.5rem !important;
+                            padding: 1.7rem 4.95rem 1.5rem 4.95rem !important;
+                            line-height: 1.4rem !important;
+                        }
+                    }
+                }
+                .accordions {
+                    .acc-title {
+                        .primary-title {
+                            @include m-425 {
+                                padding-top: 0;
+                            }
+                            @include m-320 {
+                                font-size: 2.2rem;
+                            }
+                        }
+                    }
+                    .collapse-btn {                        
+                        margin-top: 5rem;
+                        display: inline-flex;
+                        align-items: center;
+                    }
+                    .fas {                        
+                        font-size: 3rem;                        
+                        color: $primary-color;
+                        padding-right: 1rem;
+                    }
+                    .form-row {
+                        margin-top: 5rem
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tyre-search-model {
+    .modal-header {
+        @include m-425 {
+            margin-bottom: 4rem !important;
+        }
+    }
+    .form-group {
+        label {
+            @include m-425 {
+                font-size: 2.6rem !important;
+            }
+        }
+    }
+    .select-field .form-control {
+        @include m-425 {
+            height: 8rem !important;
+            font-size: 2.8rem !important;
+            line-height: 8rem !important;
+        }
+    }
+    .modal-content .modal-body .form-sec .form-row .submit-btn .btn {
+        @include m-425 {
+            font-size: 2.5rem !important;
+            height: 7rem !important;
+        }
+    }
+}

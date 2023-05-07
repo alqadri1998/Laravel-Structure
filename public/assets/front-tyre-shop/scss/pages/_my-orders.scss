@@ -1,0 +1,123 @@
+.my-orders-right-col {
+    .my-order-row {
+        position: relative;
+        .img-col {
+            max-width: 18.5rem;
+            width: 100%;
+            height: 16.5rem;
+            border: 1px solid $border-color;
+            border-radius: .5rem;            
+            @include flex-box();
+
+            @include small-767 {
+                height: 100%;
+                padding-top: 2rem;
+                padding-right: 1rem;
+            }
+
+            @include m-425 {
+                margin-bottom: 2rem;
+            }
+            a {
+                @include flex-box();
+            }
+            .img-fluid {
+                max-width: 80%;
+            }
+
+        }
+
+        padding-bottom: 3rem;
+        border-bottom: 1px solid $border-color;
+
+        .desc-col {
+            padding: 0 2rem;
+
+            .logo {
+                margin-top: -.5rem;
+            }
+
+            .text-desc {
+                .title {
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    color: $black-color;
+                    margin-top: .5rem;
+                    margin-bottom: 1rem;
+                }
+
+                .total-price {
+                    color: $secondary-color;
+                    font-weight: 500;
+                    margin-top: 0;
+
+                    .primary {
+                        color: $primary-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .left-right-text {
+                .time {
+                    padding-left: 1.5rem;
+                }
+            }
+
+            .texts {
+                font-size: 1.6rem;
+                color: #666;
+                font-weight: normal;
+                margin-bottom: .5rem;
+
+                .dark-text {
+                    color: $black-color;
+                    font-weight: 500;
+                }
+            }
+        }
+        .eye-icon {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $primary-color;
+            border-radius: 50%;
+            @include flex-box ();
+            text-decoration: none;
+            transition: .3s all;
+            .far {
+                font-size: 1.6rem;
+                color: $white;
+            }
+            &:hover {
+                background-color: $black-color;
+            }
+        }        
+    }
+
+    .btns-row {
+        margin-bottom: 3rem;
+
+        .btn {
+            padding: 1.7rem 3rem 1.6rem 3rem !important;
+            margin-right: 3rem;
+            text-transform: capitalize;
+            @include small-767 {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .btn.active {
+            background-color: $black-color;
+
+            &:after {
+                background-color: $black-color;
+            }
+        }
+    }
+    .alert-danger {
+        font-size: 1.6rem;
+    }
+}

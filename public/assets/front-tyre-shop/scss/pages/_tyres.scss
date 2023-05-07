@@ -1,0 +1,419 @@
+@include custom-checkbox();
+.tyres {
+    @include pagination-tyre-space-sm();
+    .container {
+        @include small-767 {
+            max-width: 630px;
+        }
+    }
+    .tyres-row {
+        position: relative;
+        .tyres-left-col {
+            position: static;
+            @include large-min-1199 {
+                max-width: 40.666667%;
+                flex: 0 0 40.666667%;
+            }
+            @include m-575 {
+                margin-bottom: 5rem;
+            }
+        }
+        .tyres-right-col {
+            @include large-min-1199 {
+                max-width: 59.333333%;
+                flex: 0 0 59.333333%;
+            }
+            @include medium-991 {
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-top: 3rem;
+            }
+            @include small-767 {
+                flex: 0 0 58.333333%;
+                max-width: 58.333333%;
+                margin-top: 0;
+            }
+            @include m-575 {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
+    .tyres-detail-row {
+        border: 1px solid #ddd;
+        border-radius: 1rem;
+        max-width: 66.3rem;
+        &.active {
+            border-color: $primary-color;
+        }
+        .buy-three-text {
+            text-align: center;
+            background-color: $primary-color;
+            margin-bottom: 0;
+            padding: 1.6rem;
+            font-size: 2rem;
+            line-height: 1.8rem;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-top: -1px;
+            color: #F6F6F6;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+        .promotion-col + .tyre-img-col{
+            margin-top: 0;
+        }
+        .tyre-img-col {
+            padding: 0;
+            border-right: 1px solid #ddd;
+            @include small-767 {
+                border-right: 0;
+            }
+            @include m-575 {
+                max-width: 24%;
+                flex: 0 0 24%;
+                border-right: 1px solid #ddd;
+            }
+            @include m-425 {
+                border-right: 0;
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-top: 5.8rem;
+            }
+            .img-block {
+                width: 16.3rem;
+                height: 16.3rem;
+                @include flex-box();
+                flex-direction: column;
+                // margin-top: 2rem;
+                @include small-767 {
+                    border-bottom: 1px solid #ddd;
+                    width: 100%;
+                    justify-content: flex-start;
+                    padding: 0 3rem;
+                }
+                @include m-575 {
+                    border-bottom: 0;
+                }
+                @include m-425 {
+                    margin: auto;
+                    border-bottom: 1px solid #ddd;
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: 4rem !important;
+                }
+                .tyre-img {
+                    // @include small-767 {
+                    //     height: 12rem;
+                    //     margin-top: 1rem;
+                    // }
+                    // @include m-575 {
+                    //     height: 14rem;
+                    // }
+                }
+                .brand-logo {
+                    width: 90px;
+                    height: 30px;
+                    @include flex-box();
+                    overflow: hidden;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 0;
+                    // @include m-425 {
+                    //     left: 0;
+                    //     top: 0;
+                    //     transform: translateX(0);
+                    //     opacity: .75;
+                    // }
+                }
+                .brand-logo + .tyre-img {
+                    @include m-450 {
+                        margin-top: 5rem;
+                    }
+                    @include m-425 {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .center-col {
+            padding: 0;
+            @include m-575 {
+                max-width: 59%;
+                flex: 0 0 59%;
+            }
+            @include m-425 {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+            .center-block {
+                border-right: 1px solid #ddd;
+                height: 100%;
+                @include small-767 {
+                    border-right: 0;
+                }
+                @include m-575 {
+                    border-right: 1px solid #ddd;
+                }
+                @include m-425 {
+                    border-right: 0;
+                }
+                .price-name-block {
+                    padding: 3rem 3rem;
+                    height: 13rem;
+                    @include m-425 {
+                        padding: 1rem 3rem;
+                        border-bottom: 1px solid #ddd;
+                        height: 110px;                        
+                    }
+                    .tyre-name {
+                        font-size: 1.6rem;
+                        color: $secondary-color;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        line-height: 2.8rem;
+                        // @include m-425 {
+                        //     height: 4rem;
+                        //     line-height: 2rem;
+                        //     overflow: hidden;
+                        // }
+                        @include m-450{
+                            font-size: 1.2rem;
+                            line-height: 2.1rem;
+                        }                       
+                    }
+                    .price {
+                        margin-bottom: 0;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: $primary-color;
+                        margin-top: -.2rem;
+                    }
+                }
+                .country-name-block {
+                    padding: 0 3.0rem;
+                    background-color: #ECECEC;
+                    height: 3.42rem;
+                    @include flex-box();
+                    justify-content: flex-start;
+                    @include m-450 {
+                        height: 3.5rem;
+                    }
+                    @include m-425 {
+                        background-color: rgba($primary-color,.75);
+                    }
+                    .country-name {
+                        margin-bottom: 0;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+        .last-col {
+            padding: 0;
+            @include m-575 {
+                max-width: 17%;
+                flex: 0 0 17%;
+            }
+            @include m-425 {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+            .counter-cart-icon-sm {
+                @include m-425 {
+                    display: flex;                    
+                }
+            }
+            .counter {
+                @include flex-box();
+                height: 6.6rem;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                font-size: 3.2rem;
+                font-weight: 500;
+                color: $secondary-color;
+                .fas {
+                    position: absolute;
+                    // left: 4.5rem;
+                    font-size: 1.8rem;
+                    color: $secondary-color;
+                }
+                .fa-chevron-up {
+                    top: 1.5rem;
+                }
+                .fa-chevron-down {
+                    bottom: 1.5rem;
+                }
+                .number {
+                    position: relative;
+                    right: 0rem;
+                    min-width: 1rem;
+                    margin-left: 2rem;
+                }
+                @include m-425 {
+                    display: inline-flex;
+                    width: 49.5%;
+                }
+            }
+            .cart-icon {
+                @include flex-box();
+                height: 6.4rem;
+                .fa-shopping-cart {
+                    color: $primary-color;
+                    font-size: 2.8rem;
+                }
+                @include m-425 {
+                    display: inline-flex;
+                    width: 49.5%;
+                }
+            }
+            .buy-now-btn {
+                .btn--primary {
+                    font-size: 1.4rem !important;
+                    line-height: 1.45rem !important;
+                    padding: .9rem !important;
+                    border-radius: 0 !important;
+                    border-bottom-right-radius: 1rem !important;
+                    display: block !important;
+                    font-weight: 600 !important;
+                    height: unset;
+                    width: 100%;
+                    @include small-767 {
+                        border-bottom-left-radius: 1rem !important;
+                        &::after {
+                            border-bottom-left-radius: 1rem !important;
+                        }
+                    }
+                    @include m-575 {
+                        border-bottom-left-radius: 0 !important;
+                        &::after {
+                            border-bottom-left-radius: 0 !important;
+                        }
+                    }
+                    @include m-425 {
+                        border-bottom-left-radius: 1rem !important;
+                        &::after {
+                            border-bottom-left-radius: 1rem !important;
+                        }
+                    }
+                    &:after {
+                        border-radius: 0;
+                        border-bottom-right-radius: 1rem;
+                        @include m-425 {
+                            border-bottom-left-radius: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .paginate-row.text-right {
+        padding: 0;
+        @include m-575 {
+            text-align: center !important;
+        }
+    }
+    .pagination-ctm .my-pagination .item {
+        .link,
+        .page-arow-l {
+            border-radius: 50%;
+        }
+    }
+}
+
+.tyres-detail {
+    @include m-425 {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .tyres-detail-row {
+        @include m-425 {
+            max-width: 45%;
+            flex: 45%;
+            margin: 0 1rem 3rem 1rem !important;
+        }
+        @include m-320 {
+            max-width: 100%;
+            flex: 100%;
+        }
+        .center-col {
+            .center-block {
+                .price-name-block {
+                    @include m-425 {
+                        flex-direction: column;
+                        align-items: center;
+                        // height: auto;
+                    }
+                    .name-desc {
+                        max-width: 24rem;
+                        @include m-425 {
+                            margin-bottom: 1rem;
+                            text-align: center;
+                        }
+                        // .tyre-name br {
+                        //     @include m-425 {
+                        //         display: none;
+                        //     }
+                        // }
+                    }
+                }
+                .country-name-block {
+                    @include m-425 {
+                        justify-content: flex-end !important;
+                        position: absolute;
+                        right: 0;
+                        top: -25px;
+                        left: 0;
+                       
+                    }
+                }
+            }
+        }
+        .buy-three-text {
+            @include m-425 {
+                line-height: 2.6rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    @include m-320 {
+        display: block;
+    }
+}
+
+// rtl
+.rtl {
+    .tyres {
+        .tyres-detail-row {
+            .tyre-img-col,
+            .center-block {
+                border-right: 0;
+                border-left: 1px solid #ddd;
+            }
+            .last-col {
+                .buy-now-btn {
+                    .btn--primary {
+                        border-bottom-right-radius: 0;
+                        border-bottom-left-radius: 1rem;
+                        &::after {
+                            border-bottom-right-radius: 0;
+                            border-bottom-left-radius: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        .paginate-row.text-right {
+            text-align: left !important;
+        }
+    }
+}

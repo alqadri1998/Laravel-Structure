@@ -1,0 +1,334 @@
+.site-footer {
+    // background-image: url(../../images/footer-bg.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // background-blend-mode: color;
+    @include transparent-scroll();
+    background-color: $black-dull;
+    .footer-row {
+        &.branches-row {
+            @include small-767 {                
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+        }        
+        .cols {
+            @include medium-991 {
+                max-width: 50% !important;
+                flex: 50% !important;
+                padding: 2.14rem !important;
+            }
+            @include m-425 {
+                max-width: 100% !important;
+                flex: 100% !important;
+                padding: 0 2.14rem;
+            }
+        }
+        .col-lg-4 {
+            max-width: 29.333333%;
+            flex: 0 0 29.333333%;
+            padding: 0;
+        }
+        .col-lg-2 {
+            max-width: 20.333333%;
+            flex: 0 0 20.333333%;
+        }
+    }
+    .footer-part-one {
+        padding: 6.6rem 0 4.4rem 0;
+        margin: 0 5.5rem;
+        border-bottom: 1px solid $white;
+        @include m-575 {
+            margin: 0 1.5rem;
+            padding: 5rem 0 3.5rem 0;
+        }
+        @include m-425 {
+            margin: 0 1.5rem;
+            padding: 5rem 0 3.5rem 0;
+        }
+        .desc {
+            max-width: 26.2rem;
+            height: 14.4rem;
+            color: $white;
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin: 2rem 0 6.8rem 0;
+            overflow: hidden;
+            line-height: 2.3rem;
+            @include m-425 {
+                margin-bottom: 2rem;
+                max-width: 100%;
+            }
+        }
+        @include social-icon();
+        .links {
+            .footer-title {
+                font-size: 2.4rem;
+                line-height: 2.4rem;
+                color: $white;
+                font-weight: 500;
+                margin-bottom: 3.2rem;
+                margin-top: .6rem;
+            }
+            .footer-menu {
+                .menu-item {
+                    display: flex;
+                    .fa-caret-right {
+                        color: $primary-color;
+                        font-size: 2rem;
+                        vertical-align: middle;
+                        padding-right: .8rem;
+                    }
+                    .menu-link {
+                        color: $white;
+                        font-size: 1.4rem;
+                        line-height: 1.4;
+                        font-weight: 300;
+                        margin-bottom: 1.7rem;
+                        display: inline-block;
+                        text-decoration: none;
+                        transition: .4s all;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-part-two {
+        padding: 6.7rem 0 5rem 0;
+        @include m-575 {
+            margin: 0 1.5rem;
+            padding: 5rem 0 3.5rem 0;
+        }
+        @include m-425 {
+            margin: 0 1.5rem;
+            padding: 5rem 0 3.5rem 0;
+        }
+        .branches-card {
+            height: 37rem;
+            padding-top: 3rem;
+            cursor: default;
+            @include small-767 {
+                width: 26rem;
+            } 
+            @include m-425 {
+                height: auto;
+            }          
+            .img-block {
+                @include flex-box();
+                height: 15rem;
+                position: relative;                          
+                // overflow: hidden;
+                a {
+                    cursor: default;
+                }
+                @include medium-991{
+                    height: auto;
+                }  
+                .branch-name {
+                    position: absolute;                    
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -2rem;                    
+                    // width: 100%;
+                    height: 4rem;
+                    border-radius: 3px;
+                    background-color: $white;
+                    @include m-425 {
+                        max-width: 30rem;
+                        height: 5rem;
+                        overflow: hidden;
+                    }
+                    @include m-320 {
+                        max-width: 18rem;                                                    
+                    }
+                    @include flex-box();
+                    .title {
+                        font-size: 1.4rem;
+                        color: $black;
+                        margin: 0;
+                        text-align: center;
+                        min-width: 18rem;
+                        padding: .5rem;
+                        @include m-425 {
+                            max-width: 30rem;
+                        }                        
+                    }
+                }
+            }
+            .branch-desc {
+                background-color: $white;
+                padding: 2rem 1rem 1.5rem 1rem;  
+                max-width: 262px;
+                margin: 0 auto;              
+                .items {
+                    font-size: 1.2rem;                    
+                    display: flex;                    
+                    &:first-child {
+                        .links {
+                            height: 5rem;
+                        overflow-y: auto;                          
+                        @include small-767 {
+                            height: 6.7rem;
+                            height: 2rem;
+                            margin-bottom: .5rem;
+                        } 
+                        }                       
+                    }
+                    .whats-app-icon {
+                        // padding-right: .8rem;
+                        min-width: 1.4rem;
+                        height: 1.4rem;
+                        margin: .4rem .8rem .4rem 0;
+                    }
+                    .fas,.fab {
+                        color: $primary-color;
+                        padding-right: 1rem;
+                        padding-top: .4rem;
+                        font-size: 1.4rem;
+                    }
+                    .links {
+                        color: $black;
+                        text-decoration: none;
+                        margin-bottom: .5rem;
+                        padding-top: .2rem;
+
+                    }
+                    &:hover {
+                        .links {
+                            color: $primary-color;
+                        }
+                    }
+                    // img.whats-app-icon.img-fluid {
+                    //     max-width: 1.2rem;
+                    //     height: auto;
+                    // }
+                }
+            }
+        }
+        // .img-block {
+        //     max-width: 20.8rem;
+        //     height: 9rem;
+        //     margin-bottom: 1rem;
+        //     @include flex-box();
+        //     overflow: hidden;
+        //     .img-fluid {
+        //         height: 100%;
+        //     }
+        // }
+        .sub-title {
+            font-size: 2rem;
+            color: $white;
+            line-height: 2rem;
+            font-weight: 500;
+            margin-bottom: 4.2rem;
+        }
+        .desc {
+            font-size: 1.4rem;
+            color: $white;
+            font-weight: 300;
+            line-height: 2.4rem;
+        }
+        .contact-menu {
+            .links {
+                @extend .desc;
+                display: block;
+                margin-bottom: 1rem;
+                text-decoration: none;
+                transition: .4s all;
+                display: flex;
+                &:hover {
+                    color: $primary-color;
+                }
+                .fas {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    padding-right: 1rem;
+                }
+                .flaticon {
+                    &::before {
+                        font-size: 2rem;
+                        color: $primary-color;
+                        padding-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right-sec {
+        padding: 2.0rem 0;
+        background-color: $black;
+        .text {
+            color: #D8D8D8;
+            margin-bottom: 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            .link {
+                text-decoration: none;
+                font-weight: bold;
+                color: $white;
+                transition: .3s all;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .whats-app-btn {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        left: 1.5rem;
+        bottom: 3.5rem;
+        z-index: 99;
+        // @include m-425 {
+        //     bottom: 7.3rem;
+        //     left: 2.5rem;
+        // }
+        text-decoration: none;
+        @include flex-box();
+        // .fa-whatsapp {
+        //     font-size: 2.6rem;
+        //     color: $white;
+        // }
+    }
+    .branches-slider {
+        display: none;
+        &.slick-slider {
+            display: block;
+            .branches-card {
+                margin: 0 15px;
+            }
+            *:focus {
+                outline: 0 !important;
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            .fas {
+                color: $white;
+                font-size: 3rem;  
+                &:hover {
+                    color: $primary-color;
+                }              
+            }
+            &.arrow-left {
+                left: -4rem;
+                @include large-1199 {
+                    left: -3rem;
+                }
+            }
+            &.arrow-right {
+                right: -4rem;
+                @include large-1199 {
+                    right: -3rem;
+                }
+            }
+        }
+    }
+}

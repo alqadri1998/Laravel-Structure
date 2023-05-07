@@ -1,0 +1,4 @@
+#Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^random123 timthumb.php

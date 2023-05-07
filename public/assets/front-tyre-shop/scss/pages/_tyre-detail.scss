@@ -1,0 +1,142 @@
+.tyre-detail {
+    .tyre-detail-row {
+        .img-col {
+            max-width: 40rem;
+            height: 44.5rem;
+            @include flex-box();
+
+            @include small-767 {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .tyre-desc-col {
+            max-width: 50.2rem;
+            margin-left: 2.5rem;
+        }
+
+        .tyre-logo {
+            margin-bottom: 5rem;
+            max-width: 28.6rem;
+            height: 5.1rem;
+            @include flex-box();
+        }
+
+        .tyre-name {
+            color: $black-color;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 2.8rem;
+            margin-bottom: 1.9rem;
+        }
+
+        .model {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 3rem;
+            color: $third-color;
+        }
+
+        .type-box {
+            .types-ul {
+                margin-left: 2rem;
+
+                .type-items {
+                    list-style-type: disc;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    line-height: 1.8rem;
+                    color: $black-color;
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .type-value-box {
+            .types-value-ul {
+                .type-items {
+                    color: $text-color;
+                    font-size: 1.8rem;
+                    line-height: 1.8rem;
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .price {
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            font-weight: bold;
+            color: $primary-color;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-b {
+            font-size: 1.6rem;
+            color: $black-color;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .btn-and-counter {
+            margin-top: 5rem;
+
+            .buy-now-btn {
+                .btn {
+                    width: 27rem;
+                    padding: 1.7rem 1.5rem 1.6rem 1.5rem !important;
+                    max-width: 100%;
+
+                    @include medium-991 {
+                        width: 21rem;
+                    }
+                }
+            }
+
+            .quantity-ul {
+                width: 20.2rem;
+                max-width: 100%;
+                margin-bottom: 0;
+                height: 5rem;
+                border: 1px solid #eee;
+                border-radius: .5rem;
+
+                @include m-320 {
+                    margin-top: 3rem;
+                }
+            }
+
+            .increse-decrease-btn {
+                border: 0;
+                background: transparent;
+                font-size: 2.3rem;
+                @include flex-box();
+                height: 5rem;
+                cursor: pointer;
+                color: $text-color;
+                width: 6.65rem;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button.border-x {
+                border-left: 1px solid #eee;
+                border-right: 1px solid #eee;
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $fifth-color;
+            }
+        }
+    }
+}

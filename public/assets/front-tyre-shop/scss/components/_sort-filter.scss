@@ -1,0 +1,122 @@
+.sort-filter {
+    max-width: 26.3rem;
+    width: 100%;
+    margin-left: auto;
+    margin-bottom: 4rem;
+    position: absolute;
+    right: 15px;
+    top: -7rem;
+    @include medium-991 {
+        top: 0;
+    }
+    @include m-575 {
+        top: -2rem;
+    }
+    @include m-320 {
+        max-width: 20rem;
+    }
+    .custom-select {
+        background-position: right 2rem center;
+        cursor: pointer;
+        color: $black-dull;
+        border-color: $black-dull;
+        &:focus {
+            box-shadow: none;
+            border-color: #ccc;
+        }
+    }
+    .dropdown-toggle {
+        display: block;
+        border: 1px solid $seventh-color;
+        border-radius: 1rem;
+        width: 100%;
+        height: 5rem;
+        @include flex-box();
+        padding: 0 2rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: $sixth-color;
+        text-decoration: none;
+        justify-content: flex-start;
+        @include m-425 {
+            font-size: 2.2rem;
+        }
+        @include m-320 {
+            font-size: 1.6rem;
+        }
+        &::after {
+            right: 2rem;
+            position: absolute;
+            color: $text-color;
+            font-size: 2.4rem;
+        }
+    }
+    .dropdown-menu {
+        transform: translate3d(7.2rem, 3.4rem, 0px) !important;
+        max-width: 17.1rem;
+        width: 100%;
+        border: 0;
+        background-color: $white-color;
+        border-radius: .5rem;
+        box-shadow: 0 1px 15px rgba($black-color, .15);
+        padding: 0;
+        margin: 0;
+        @include m-425 {
+            transform: translate3d(0, 3.4rem, 0px) !important;
+        }
+        .nav-item {
+            padding: 0;
+            background-color: $white-color;
+            height: 4.3rem;
+            padding: 2.5rem;
+            transition: .4s all;
+            display: flex;
+            align-items: center;
+            &.active,
+            &:hover {
+                background-color: $primary-color;
+                .nav-link {
+                    color: $white-color;
+                }
+            }
+        }
+        .nav-link {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $black-dull;
+            transition: .4s all;
+            padding: 0;
+        }
+    }
+}
+
+.filter-option-sm {
+    position: absolute;
+    left: 15px;
+    top: -7rem;
+    width: 100%;    
+    @include m-575 {
+        top: -2rem;
+    }
+    .filter-btn {
+        padding: 0 2rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: $sixth-color;
+        border: 1px solid $seventh-color;
+        height: 5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        @include flex-box();
+        max-width: 20rem;
+        display: none;
+        width: 100%;
+        @include small-767 {
+            font-size: 2.2rem;
+            display: flex;
+        }
+        @include m-320 {
+            font-size: 1.6rem;
+        }
+    }
+}

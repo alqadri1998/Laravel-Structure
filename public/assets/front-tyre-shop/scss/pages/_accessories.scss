@@ -1,0 +1,35 @@
+.accessories {
+    .tyres-detail-row {
+        .tyre-img-col {
+            border-right: 0;
+            .img-block {
+                height: 16.5rem;
+                .tyre-img {
+                    border: 1px solid $second-border;
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                }
+            }
+        }
+        .center-col {
+            .center-block {
+                .price-name-block {
+                    height: 100%;
+                    align-items: center;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    .price {
+                        line-height: 2.8rem;
+                        margin-bottom: .5rem;
+                        text-align: center;
+                    }
+                    .tax {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}

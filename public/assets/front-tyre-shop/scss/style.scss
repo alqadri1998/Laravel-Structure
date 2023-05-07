@@ -1,0 +1,47 @@
+// imports
+@import "components/responsive";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/flaticon";
+@import "components/button";
+@import "components/pagination";
+@import "components/filter";
+@import "components/popup";
+@import "components/sort-filter";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/home";
+@import "pages/login";
+@import "pages/services";
+@import "pages/services-sub";
+@import "pages/tyres";
+@import "pages/cart";
+@import "pages/promotion-location";
+@import "pages/my-orders";
+@import "pages/checkout";
+@import "pages/404";
+@import "pages/tyre-detail";
+@import "pages/order-detail";
+@import "pages/accessories";
+@import "pages/left-sidebar";
+@include breadcrumbs();
+@include forgot-pass-head();
+@include reset-pass-head();
+@include privacy-policy-head();
+@include terms-conditions-head();
+@include create-an-account-head();
+@include primaryText();
+@include dashboard();
+@include repair-page();
+@include email-verification-head();
+@include packages-page();
+@include brand-page();
+.container {
+    @include large-min-1199 {
+        max-width: 1170px !important;
+    }
+}

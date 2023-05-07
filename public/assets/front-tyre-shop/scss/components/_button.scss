@@ -1,0 +1,59 @@
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10rem !important;
+    transition: .4s all !important;
+    display: inline-block !important;
+    position: relative;
+    font-size: 1.6rem !important;
+    line-height: 1.6rem !important;
+    padding: 1.6rem 0 !important;
+    font-weight: 500 !important;
+    height: 5rem;
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba($black, .20);
+        // transform: translateY(-.3rem);
+        color: $white;
+    }
+    &:active {
+        box-shadow: 0 .5rem .5rem rgba($black, .20);
+        transform: translateY(-.1rem);
+    }
+    &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border-radius: 10rem;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: .4s all;
+    }
+    &--primary {
+        color: $white;
+        background-color: $primary-color;
+        font-weight: 500;
+        z-index: 1;
+        &:after {
+            background-color: $primary-color;
+        }
+    }
+    &--black {
+        color: $white;
+        background-color: $black;
+        font-weight: 500;
+        z-index: 1;
+        &:after {
+            background-color: $black;
+        }
+    }
+    &--animate {
+        animation: moveInBottom .5s ease-out .75s;
+    }
+}

@@ -1,0 +1,139 @@
+// dashboard left nev
+.nav-left-mt-a {
+    padding: 0px 0px !important;
+    background-color: white;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    .nav-item {
+        background: #fff;
+        .nav-link {
+            border-bottom: 1px solid #EEEEEE;
+            font-size: 16px;
+            text-transform: capitalize;
+            display: flex;
+            color: #666;
+            margin: 0px 20px;
+            padding: 0px 0px !important;
+            height: 70px;
+            align-items: center;
+            .fa,
+            .fas {
+                font-weight: 900;
+                color: red;
+                margin-right: 10px;
+            }
+            img {
+                margin-right: 19px;
+            }
+            .fa-hands-helping {
+                margin-right: 13px;
+            }
+        }
+        &:hover {
+            background: $black-color;
+            .nav-link {
+                color: white !important;
+                border-bottom: none;
+                i {
+                    color: white !important;
+                    background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+                    background-clip: text;
+                    color: white;
+                    text-transform: uppercase;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                img {
+                    -moz-filter: brightness(0) invert(1);
+                    -o-filter: brightness(0) invert(1);
+                    -ms-filter: brightness(0) invert(1);
+                    -webkit-filter: brightness(0) invert(1);
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+    .nav-item.active {
+        background: green;
+        a {
+            color: white !important;
+            border-color: red;
+            i {
+                color: #ffffff !important;
+                background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+                background-clip: text;
+                color: white;
+                text-transform: uppercase;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            img {
+                -moz-filter: brightness(0) invert(1);
+                -o-filter: brightness(0) invert(1);
+                -ms-filter: brightness(0) invert(1);
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+
+// Floating button
+.floating-contacts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    height: 100vh !important;
+    width: 350px;
+    transform: translateX(-350px);
+    transition: 0.5s all;
+    background: white;
+    .toggle-btn {
+        // background: $primary;
+        width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+        position: absolute;
+        right: -25px;
+        bottom: 20%;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        i {
+            color: white;
+            transition: all 0.4s;
+        }
+    }
+    .left-menu {
+        box-shadow: none !important;
+    }
+}
+
+.translate-0 {
+    transform: translateX(0) !important;
+    .toggle-btn {
+        i {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .floating-contacts.translate-0 {
+        height: 100vh!important;
+        width: 294px!important;
+    }
+}
+
+.rtl {
+    .nav-left-mt-a .nav-item .nav-link .fas {
+        font-weight: 900;
+        // color: $orange;
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+}

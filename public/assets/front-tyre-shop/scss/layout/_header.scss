@@ -1,0 +1,421 @@
+.collapseable-nav.menu-overlay {
+    visibility: 1;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+.login-btn-mt {
+    font-size: 1.4rem !important;
+    line-height: 1.4rem !important;
+    padding: .8rem 2.9rem !important;
+    height: 3.2rem;
+    text-transform: capitalize;
+    @include small-767{
+        border-radius: 0 !important;
+        font-size: 2.0rem !important;
+        line-height: 2.4rem !important;
+        padding: 1.8rem 4.9rem !important;
+        height: 6.2rem;  
+        &:after {
+            border-radius: 0 !important;
+        }          
+    }
+}
+.login-btn-lg {
+    @include small-767{
+        display: none !important;
+    }
+}
+
+
+.collapseable-nav {
+    // @include m-425 {
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: rgba($primary-color, .95);
+        transform: unset;
+        z-index: 99;
+        visibility: 0;
+        display: flex;
+        align-self: start;
+        overflow-y: auto;
+        .collapse-btn {
+            line-height: 2.7rem;
+            overflow: hidden;
+            margin-top: 3rem !important;
+        }
+        #accordion {
+            .nav-item {
+                margin: 1.5rem 0 1.5rem 4rem;
+                .sub-item {
+                    font-size: 2.6rem;
+                    color: $black-color;
+                    font-weight: 500;
+                    text-decoration: none;
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown {
+        @include dropdown-menu-btn();                 
+    }         
+// }
+
+
+.navbar-nav {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;    
+    #accordion {
+        .nav-link {            
+            margin-left: 0;
+        }
+    }
+    .icons {
+        @include small-767 {
+            margin-left: 6rem;
+        }
+    }
+    // @include m-425 {
+        padding: 4rem 0 7rem 0;
+        .nav-link {
+            margin: 1.5rem .7rem;
+            margin-left: 3rem;
+            @include small-767 {
+                margin-left: 4rem;
+            }
+        }
+    // }
+    .active {
+        .nav-link {
+            font-weight: bold;
+        }
+    }
+    .nav-link {
+        font-size: 22px;
+        font-weight: 500;
+        color: $black !important;
+        padding: 0 1.7rem !important;
+        transition: .4s all;
+        text-transform: uppercase;
+        &:hover,
+        &:focus {
+            font-weight: bold;
+        }
+    }    
+}
+
+.site-header {    
+    padding: 1.8rem 0;    
+    @include large-1199 {
+        @include responsive-menu();
+    }
+    // @include m-425 {
+        @include responsive-menu();
+        padding-bottom: 0;        
+    // }
+    .menu {
+        .container {
+            @include large-1199 {
+                padding: 0 2rem;
+                max-width: 100%;            
+            }
+            @include small-767{
+                padding: 0;                
+            }
+        }
+        .cart-icon {
+            display: none !important;
+            @include small-767 {
+                display: block !important;
+            }
+        }
+    }
+
+    .navbar {        
+        @include small-767{
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            flex-direction: column-reverse;
+            justify-content: flex-start !important;
+        }
+        .logo-sec {
+            @include small-767 {
+                max-width: 35rem;
+                margin-left: 2.14rem;
+                margin-right: auto;
+            }  
+            @include m-320 {
+                max-width: 27rem;
+            }          
+        }
+        .contact-info-sec {
+            @include small-767 {
+                background-color: #101318;
+                display: flex;                
+                align-items: center;
+                margin-top: 2rem;
+                justify-content: space-between;
+                padding: 1rem;
+                width: 100%;                                
+            } 
+            .no {
+                margin-bottom: 0;
+            } 
+            .fas {
+                display: none;
+                @include small-767{
+                    font-size: 1.6rem;
+                    display: block;
+                    color: $white;
+                }                                              
+            }          
+            .link {
+                font-size: 2.6rem;
+                font-weight: bold;
+                line-height: 3.2rem;
+                margin-bottom: .5rem;
+                color: $black;
+                text-decoration: none;
+                letter-spacing: .5rem;
+                @include medium-991 {
+                    font-size: 2rem;
+                }
+                @include small-767{                    
+                    font-weight: 600;
+                    letter-spacing: normal;
+                    font-size: 1.6rem;
+                    color: $white;
+                }
+            }
+            .desc {
+                margin-bottom: 0;
+                color: $black;
+                font-size: 1.4rem;
+                font-weight: 500;
+                @include small-767 {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+            }
+        }
+        // .toggle-btn-menu {
+        //     display: none;
+        //     @include m-425 {
+        //         display: block;
+        //     }
+        // }
+        // Hamburger icon
+        .navbar-toggler-btn {            
+            @include small-767{                
+                right: 6.14rem;
+                top: 2.2rem;
+                position: absolute;
+            }
+            @include m-425 {                
+                right: 2.14rem;
+                top: 1rem;
+            }
+            @include m-320 {
+                top: 5px;
+            }
+            .hamburger {
+                top: 0;
+                padding: 0px 15px;
+                display: inline-block;
+                cursor: pointer;
+                transition-property: opacity, filter;
+                transition-duration: 0.15s;
+                transition-timing-function: linear;
+                font: inherit;
+                color: inherit;
+                text-transform: none;
+                background-color: transparent;
+                border: 0;
+                margin: 0;
+                overflow: visible;
+                position: relative;
+                z-index: 99;
+                right: -5rem !important;
+                @include large-1199 {
+                    right: .5rem !important;
+                }
+                @include small-767 {
+                    right: -5rem !important;
+                }
+                @include m-425 {
+                    top: 8px;
+                    right: 0 !important;
+                }
+                &.hamburger--spin {
+                    .hamburger-inner {
+                        &::before {
+                            transition: top .1s .25s ease-in, opacity .1s ease-in;
+                        }
+                        &:after {
+                            transition: bottom .1s .25s ease-in, transform .22s cubic-bezier(.55, .055, .675, .19);
+                        }
+                    }
+                }
+                .hamburger-inner {
+                    width: 30px;
+                    height: 3px;
+                    background-color: #000;
+                    border-radius: 4px;
+                    &::before,
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 30px;
+                        height: 3px;
+                        background-color: #000;
+                        border-radius: 4px;
+                        position: absolute;
+                        transition-property: transform;
+                        transition-duration: 0.15s;
+                        transition-timing-function: ease;
+                    }
+                    &::before {
+                        top: -10px;
+                    }
+                    &::after {
+                        bottom: -8px;
+                    }
+                }
+                &.is-active {
+                    border: 2px solid #000;
+                    border-radius: 50px;
+                    width: 41px;
+                    height: 41px;
+                    padding: 10px 8px 0 0;
+                    top: 10px;
+                    position: absolute;
+                    text-align: center;
+                    right: 7rem !important;
+                    top: 5rem;
+                    position: fixed;
+                    @include m-425 {
+                        padding: 12px 7px 0 0;
+                    }                    
+                    .hamburger-inner {
+                        transform: rotate(225deg);
+                        transition-delay: 0.12s;
+                        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+                        height: 2px;
+                        &::before {
+                            top: 0;
+                            opacity: 0;
+                            transition: top .1s ease-out, opacity .1s .12s ease-out;
+                            content: "";
+                            display: block;
+                            width: 30px;
+                            height: 3px;
+                            background-color: #000;
+                            border-radius: 4px;
+                            position: absolute;
+                            transition-property: transform;
+                            transition-duration: 0.15s;
+                            transition-timing-function: ease;
+                        }
+                        &:after {
+                            bottom: 0;
+                            transform: rotate(-90deg);
+                            transition: bottom .1s ease-out, transform .22s .12s cubic-bezier(.215, .61, .355, 1);
+                            height: 2px;
+                            background-color: #000;
+                            border-radius: 4px;
+                            position: absolute;
+                            width: 30px;
+                            content: "";
+                            display: block;
+                        }
+                    }
+                }
+                .hamburger-box {
+                    width: 22px;
+                    height: auto;
+                    display: inline-block;
+                    position: relative;
+                    .hamburger-inner {
+                        display: block;
+                        top: 50%;
+                        margin-top: -2px;
+                        transition-duration: 0.22s;
+                        transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+                    }
+                }
+            }
+        }
+        .icons {
+            @include flex-box();
+            @include medium-991 {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1.5rem;
+            }
+            @include small-767 {
+                position: absolute;
+                right: 6.5rem;
+                top: 1rem;
+                margin: 0;
+            }
+            @include m-320 {
+                top: 5px;
+            }
+            .search-btn {
+                @include flex-box();
+                margin: 0 2rem;
+                border: 1px solid $black-color;
+                border-radius: 50%;
+                width: 4.3rem;
+                padding-top: 1px;
+                height: 4.3rem;
+                cursor: pointer;
+                .fa-search {
+                    font-size: 1.6rem;
+                    color: $black-color;
+                }
+            }
+            .icon-btn {
+                @include flex-box();
+                margin-right: 2.8rem;
+                border: 1.2px solid $black;
+                padding: .8rem;
+                border-radius: 50%;
+                height: 4.3rem;
+                width: 4.3rem;
+                position: relative;
+                transition: .4s all;
+                &:hover {
+                    background-color: $primary-color;
+                }
+                .quantity {
+                    @include flex-box();
+                    position: absolute;
+                    color: $white;
+                    font-size: 1.2rem;
+                    top: -.7rem;
+                    right: -1.3rem;
+                    width: 2.3rem;
+                    height: 2.3rem;
+                    background: $primary-color;
+                    border-radius: 5rem;
+                }
+            }
+            .dropdown {
+                @include dropdown-menu-btn();
+            }            
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.order-detail {
+    .bb-space {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    .weight-regular {
+        font-weight: normal;
+    }
+    .mb-22 {
+        margin-bottom: 2.0rem;
+    }
+    .primary-title {
+        font-size: 2.2rem;
+        color: $black-color;
+        font-weight: 600;
+        font-family: $primary-font;
+        line-height: 2.2rem;
+        .red {
+            font-weight: bold;
+            color: $primary-color;
+            margin-bottom: 1.3rem;
+            display: inline-block;
+        }
+    }
+    .product-types {
+        .title-value {
+            color: #222;
+            font-size: 1.6rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .dem-text {
+            color: #666;
+        }
+    }
+    .primary-text {
+        color: #666;
+        text-transform: capitalize;
+    }
+    .desc-header {
+        // align-items: center;
+        .fa-check {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            font-size: 1.4rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 2rem;
+        }
+        .primary-text {
+            line-height: unset;
+        }
+    }
+    .value-box {
+        .primary-text {
+            color: $black-color;
+            font-weight: 500;
+            display: flex;
+            .value {
+                color: $text-color;
+                font-weight: normal;
+                padding-left: .5rem;
+            }
+        }
+    }
+    .fitting-location {
+        border-top: 1px solid #eee;
+        .motor-city {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+            color: $black-color;
+        }
+    }
+}
